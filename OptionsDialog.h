@@ -1,0 +1,122 @@
+//////////////////////////////////////////////////////////////////////////
+//					OptionsDialog.h
+//
+//	Represents a standard options dialog box where the user can toggle 
+//	3D mode, full screen, custom cursors, adjust sound volumes, and
+//	quit the game.
+//////////////////////////////////////////////////////////////////////////
+
+
+#ifndef __OPTIONS_DIALOG_H__
+#define __OPTIONS_DIALOG_H__
+
+#include "../SexyAppFramework/Dialog.h"
+#include "../SexyAppFramework/SliderListener.h"
+#include "../SexyAppFramework/CheckboxListener.h"
+#include "OptionsDialogHost.h"
+#include "Floater.h"
+
+namespace Sexy
+{
+
+	class Graphics;
+	class Slider;
+	class DialogButton;
+	class Checkbox;
+	class Board;
+
+	class OptionsDialog : public Dialog, public Floater, public SliderListener, public CheckboxListener
+	{
+
+	protected:
+
+		Slider*			mMusicVolumeSlider;
+		Slider*			mSfxVolumeSlider;
+		Slider*			mScreenDimensionsSlider;
+//		DialogButton*	mQuitBtn;
+		OptionsDialogHost*	mHost;
+
+		int				mScreenSizeList[3][2];
+		bool			mScreenSizeChanged;
+
+
+
+	public:
+
+		enum WIDGETID
+		{
+			MUSIC_SLIDER_ID,
+			SFX_SLIDER_ID,
+			SCREENDIMENSIONS_SLIDER_ID,
+			QUIT_BTN_ID,
+			FS_CHECKBOX_ID,
+			HARDWARE_CHECKBOX_ID,
+			CUSTOM_CURSORS_CHECKBOX_ID,
+			MESSAGE_BOX_ID,
+			DIALOG_ID
+		};
+
+
+		Checkbox*		m3DCheckbox;		
+		Checkbox*		mFSCheckbox;		
+		Checkbox*		mCustomCursorsCheckbox;
+
+		float			mAlpha;
+
+
+	public:
+
+        //////////////////////////////////////////////////////////////////////////
+        //	Function: OptionsDialog
+		//	Parameters:
+		//		b - A pointer to the board, used to unpause when dialog closes
+		//
+		//	Returns: none
+		//////////////////////////////////////////////////////////////////////////		
+		OptionsDialog(OptionsDialogHost* theHost);
+		virtual ~OptionsDialog();
+
+
+		//////////////////////////////////////////////////////////////////////////
+		//	Draw
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	Draw(Graphics* g);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	ButtonDepress
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	ButtonDepress(int theId);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	AddedToManager
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	AddedToManager(WidgetManager* theWidgetManager);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	RemovedFromManager
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	RemovedFromManager(WidgetManager* theWidgetManager);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	Resize
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	Resize(int theX, int theY, int theWidth, int theHeight);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	SliderVal
+		//////////////////////////////////////////////////////////////////////////		
+		virtual void	SliderVal(int theId, double theVal);
+
+		//////////////////////////////////////////////////////////////////////////
+		//	CheckboxChecked
+		//////////////////////////////////////////////////////////////////////////		
+		void			CheckboxChecked(int theId, bool checked);
+
+		virtual void	Update(void);
+	};
+
+
+}
+
+
+#endif

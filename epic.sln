@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "epic", "Hun-garr VS2005.vcxproj", "{1D5FBC14-C869-4CC1-8337-B084767012C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SexyAppBase", "..\sexyappframework\SexyAppBase VS2005.vcxproj", "{DA08CABA-92AC-40F0-B63D-6ACE7814D600}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - Incremental|Win32 = Debug - Incremental|Win32
+		Debug - Zylom|Win32 = Debug - Zylom|Win32
+		Debug|Win32 = Debug|Win32
+		Release - Zylom|Win32 = Release - Zylom|Win32
+		Release noop|Win32 = Release noop|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug - Incremental|Win32.ActiveCfg = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug - Incremental|Win32.Build.0 = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug - Zylom|Win32.ActiveCfg = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug - Zylom|Win32.Build.0 = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Debug|Win32.Build.0 = Debug|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release - Zylom|Win32.ActiveCfg = Release|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release - Zylom|Win32.Build.0 = Release|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release noop|Win32.ActiveCfg = Release|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release noop|Win32.Build.0 = Release|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release|Win32.ActiveCfg = Release|Win32
+		{1D5FBC14-C869-4CC1-8337-B084767012C3}.Release|Win32.Build.0 = Release|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug - Incremental|Win32.ActiveCfg = Debug - Incremental|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug - Incremental|Win32.Build.0 = Debug - Incremental|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug - Zylom|Win32.ActiveCfg = Debug - Zylom|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug - Zylom|Win32.Build.0 = Debug - Zylom|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Debug|Win32.Build.0 = Debug|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release - Zylom|Win32.ActiveCfg = Release - Zylom|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release - Zylom|Win32.Build.0 = Release - Zylom|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release noop|Win32.ActiveCfg = Release noop|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release noop|Win32.Build.0 = Release noop|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release|Win32.ActiveCfg = Release|Win32
+		{DA08CABA-92AC-40F0-B63D-6ACE7814D600}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

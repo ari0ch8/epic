@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>epic</ProjectName>
+    <ProjectGuid>{1D5FBC14-C869-4CC1-8337-B084767012C3}</ProjectGuid>
+    <RootNamespace>Matchblox2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>DebugVS2005\</OutDir>
+    <IntDir>DebugVS2005\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>J:\projects\Epic\working\sexyappframework;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>ReleaseVS2005\</OutDir>
+    <IntDir>ReleaseVS2005\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;wsock32.lib;gdi32.lib;advapi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Epic.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)epic.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>epic.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy j:\projects\epic\working\source\DebugVS2005\Epic.exe j:\projects\epic\working\Epic.exe /y
+copy j:\projects\epic\working\source\DebugVS2005\Epic.pdb j:\projects\epic\working\Epic.pdb /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;wsock32.lib;gdi32.lib;advapi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)../../Epic.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sexyappframework\SexyAppBase VS2005.vcxproj">
+      <Project>{da08caba-92ac-40f0-b63d-6ace7814d600}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorManager.cpp" />
+    <ClCompile Include="ActorTile.cpp" />
+    <ClCompile Include="Attractor.cpp" />
+    <ClCompile Include="Digit.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="FancyTextWidget.cpp" />
+    <ClCompile Include="Floater.cpp" />
+    <ClCompile Include="FloatingNumber.cpp" />
+    <ClCompile Include="Force.cpp" />
+    <ClCompile Include="GameApp.cpp" />
+    <ClCompile Include="GameBoard.cpp" />
+    <ClCompile Include="GamePanel.cpp" />
+    <ClCompile Include="GameProperties.cpp" />
+    <ClCompile Include="GameScreen.cpp" />
+    <ClCompile Include="GameTile.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="GroundTile.cpp" />
+    <ClCompile Include="hgeparticle.cpp" />
+    <ClCompile Include="hgepmanager.cpp" />
+    <ClCompile Include="hgeRandom.cpp" />
+    <ClCompile Include="hgerect.cpp" />
+    <ClCompile Include="hgevector.cpp" />
+    <ClCompile Include="ImageLinkWidget.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelPak.cpp" />
+    <ClCompile Include="LevelPakDialog.cpp" />
+    <ClCompile Include="LevelupEffect.cpp" />
+    <ClCompile Include="LoadingProgress.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapView.cpp" />
+    <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="OptionsDialog.cpp" />
+    <ClCompile Include="ParticleWidget.cpp" />
+    <ClCompile Include="PauseBGTint.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerDialog.cpp" />
+    <ClCompile Include="PuzzlePakItem.cpp" />
+    <ClCompile Include="Res.cpp" />
+    <ClCompile Include="SliderButton.cpp" />
+    <ClCompile Include="sqlite3.c" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileManager.cpp" />
+    <ClCompile Include="WallTile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Matchblox2.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Res.h" />
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorManager.h" />
+    <ClInclude Include="ActorTile.h" />
+    <ClInclude Include="Attractor.h" />
+    <ClInclude Include="Digit.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="FancyTextWidget.h" />
+    <ClInclude Include="Floater.h" />
+    <ClInclude Include="FloatingNumber.h" />
+    <ClInclude Include="Force.h" />
+    <ClInclude Include="GameApp.h" />
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="GamePanel.h" />
+    <ClInclude Include="GameProperties.h" />
+    <ClInclude Include="GameScreen.h" />
+    <ClInclude Include="GameTile.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="GroundTile.h" />
+    <ClInclude Include="hgecolor.h" />
+    <ClInclude Include="hgeparticle.h" />
+    <ClInclude Include="hgeRandom.h" />
+    <ClInclude Include="hgerect.h" />
+    <ClInclude Include="hgevector.h" />
+    <ClInclude Include="ImageLinkWidget.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelPak.h" />
+    <ClInclude Include="LevelPakDialog.h" />
+    <ClInclude Include="LevelPakDialogHost.h" />
+    <ClInclude Include="LevelupEffect.h" />
+    <ClInclude Include="LoadingProgress.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapView.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="OptionsDialog.h" />
+    <ClInclude Include="OptionsDialogHost.h" />
+    <ClInclude Include="ParticleWidget.h" />
+    <ClInclude Include="PauseBGTint.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerDialog.h" />
+    <ClInclude Include="PlayerDialogHost.h" />
+    <ClInclude Include="PuzzlePakItem.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SliderButton.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="sqlite3ext.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TileManager.h" />
+    <ClInclude Include="WallTile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\properties\default.xml" />
+    <Xml Include="..\properties\resources.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Script1.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
